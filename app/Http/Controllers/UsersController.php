@@ -15,8 +15,8 @@ class UsersController extends Controller
      *
      * @return Response
      */
-   
-     public function users()
+    
+     public function index()
     {
         //
         $users = DB::Table('users')->get();

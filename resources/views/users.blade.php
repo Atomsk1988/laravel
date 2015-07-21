@@ -1,4 +1,6 @@
-@extends('master')
+@extends('base.master')
+
+
 
 @section('content')
 	User index:

@@ -13,9 +13,8 @@ class PagesController extends Controller
 {
 
     public function __contruct(Request $request, $id){
-        $this->has_user_session = $request->session()->has('user');
         
-        
+        $this->logged=($request->user())?true:false;
     } 
 
     
@@ -28,12 +27,13 @@ class PagesController extends Controller
     {
         return view('pages.welcome');
     }
-
+    public function home()
+    {
+        return view('pages.home');
+    }
     public function users()
     {
-        if (Auth::guest()){
-             redirect()->intended('welcome');
-        }
+         
         $users = DB::Table('users')->get();
         return view('pages.users', $users);
     }

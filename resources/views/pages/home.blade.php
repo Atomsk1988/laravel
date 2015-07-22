@@ -1,5 +1,5 @@
 @extends('base.master')
 
 @section('content')
-   Welcome
+	Home:
 @stop

@@ -5,16 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use DB;
 use Auth;
-use Log;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
 class PagesController extends Controller
 {
 
-    public function __contruct(Request $request, $id){
-        
-        $this->logged=($request->user())?true:false;
+    public function __contruct(){
+       
     } 
 
     
@@ -29,7 +27,7 @@ class PagesController extends Controller
     }
     public function home()
     {
-        return view('pages.home');
+        return view('pages.home', $this->userAuthed);
     }
     public function users()
     {

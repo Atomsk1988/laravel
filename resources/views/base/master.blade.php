@@ -35,9 +35,11 @@
             </button>
             <a class="navbar-brand" href="#">Project name</a>
           </div>
-          <div id="navbar" class="navbar-collapse collapse">
+
+          @include('partials.loginForm')
+          <!--<div id="navbar" class="navbar-collapse collapse">
             <a href="./auth/login">Log in</a> <a href="./auth/register">Register</a>
-          </div><!--/.navbar-collapse -->                                                                                                     
+          </div>/.navbar-collapse -->                                                                                                     
         </div>
       </nav>
       
